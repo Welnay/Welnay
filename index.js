@@ -48,7 +48,7 @@ client.on('interactionCreate', interaction => {
 		
 		const embed = {
 			color: 0xb00000,
-			description: `\n${emojidanger} **__Le règlement est considéré comme lu et approuvé par tout les membres. ${emojicheck}__**\n `,
+			description: `\n${emojidanger} **__Le règlement est considéré comme lu et approuvé par tous les membres. ${emojicheck}__**\n `,
 			timestamp: new Date(),
 			footer: {
 				text: 'WellBot',
