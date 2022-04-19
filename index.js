@@ -8,7 +8,7 @@ const wait = require('node:timers/promises').setTimeout;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_BANS, Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS, Intents.FLAGS.GUILD_INTEGRATIONS, Intents.FLAGS.GUILD_WEBHOOKS, Intents.FLAGS.GUILD_INVITES, Intents.FLAGS.GUILD_VOICE_STATES, Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_MESSAGE_TYPING, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.DIRECT_MESSAGE_REACTIONS, Intents.FLAGS.DIRECT_MESSAGE_TYPING ] });
 
 client.once('ready', () => {
-	console.log('AURCES Bot démarré');
+	console.log('WellBot démarré');
 	client.user.setStatus('dnd');
     const guild = client.guilds.cache.get(guildId);
     const memberCount = guild.memberCount
@@ -121,7 +121,7 @@ client.on('interactionCreate', interaction => {
 			);
 		
 		const emojiselection = client.emojis.cache.get('964300994299166780');
-		interaction.channel.send({ content: `${emojiselection} **Bienvenue dans le menu d'intéraction <@${auteur.id}> !**`, components: [row], ephemeral: true})
+		interaction.channel.send({ content: `${emojiselection} **Bienvenue dans le menu d'intéraction <@${auteur.id}> !**`, components: [row] })
 
 		client.on('interactionCreate', async interaction => {
 			if (!interaction.isSelectMenu()) return;
